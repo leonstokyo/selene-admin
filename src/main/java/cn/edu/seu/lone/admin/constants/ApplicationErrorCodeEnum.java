@@ -24,7 +24,7 @@ public enum ApplicationErrorCodeEnum implements ErrorCodeEnum {
 
 
     // 用户服务模块的异常信息
-    USER_NOT_FOUND(ErrorCodeEnum.MODULE_USER, "100003", "用户不存在！"),
+    USER_NOT_FOUND_OR_INCORRECT_PASSWORD(ErrorCodeEnum.MODULE_USER, "100003", "用户不存在或密码错误！"),
     USER_PWD_ERROR(ErrorCodeEnum.MODULE_USER, "100004", "用户密码错误！"),
     USER_EXISTS(ErrorCodeEnum.MODULE_USER, "100005", "用户已存在！"),
     USER_COMPANY_NOT_FOUND(ErrorCodeEnum.MODULE_USER, "100006", "公司不存在！"),
