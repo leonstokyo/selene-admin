@@ -7,6 +7,7 @@ import cn.edu.seu.lone.admin.service.LoginService;
 import cn.edu.seu.lone.admin.utils.JwtUtils;
 import cn.edu.seu.lone.admin.utils.RedisCache;
 import cn.edu.seu.lone.admin.vo.ApiRespResult;
+import com.alibaba.fastjson.JSONObject;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.InternalAuthenticationServiceException;
