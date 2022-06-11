@@ -1,10 +1,7 @@
 package cn.edu.seu.lone.admin.domain;
 
 import cn.edu.seu.lone.admin.entity.Account;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -15,6 +12,8 @@ import java.util.Collection;
 @AllArgsConstructor
 @Builder
 public class LoginAccount implements UserDetails {
+
+    private static final long serialVersionUID = -40356785423868312L;
 
     private Account account;
 

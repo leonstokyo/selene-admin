@@ -11,9 +11,9 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 public class RedisConfig {
 
     @Bean
-    public RedisTemplate<Object, Object> redisTemplate(RedisConnectionFactory connectionFactory)
+    public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory connectionFactory)
     {
-        RedisTemplate<Object, Object> template = new RedisTemplate<>();
+        RedisTemplate<String, Object> template = new RedisTemplate<>();
         template.setConnectionFactory(connectionFactory);
 
         FastJsonRedisSerializer<Object> serializer = new FastJsonRedisSerializer<>(Object.class);
@@ -25,6 +25,7 @@ public class RedisConfig {
         // Hash的key也采用StringRedisSerializer的序列化方式
         template.setHashKeySerializer(new StringRedisSerializer());
         template.setHashValueSerializer(serializer);
+
 
         template.afterPropertiesSet();
         return template;

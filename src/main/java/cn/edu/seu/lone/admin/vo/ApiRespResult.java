@@ -20,7 +20,7 @@ public class ApiRespResult<T> implements Serializable {
     private String msg = ApplicationErrorCodeEnum.SUCCESS.getMessage();
 
     /**
-     * 扩展对象(放置分页信息、其他信息等)
+     * 扩展对象(其他信息等)
      */
     private Object extendData;
 
